@@ -17,7 +17,7 @@ public class Battle : MonoBehaviour
         //单例
         instance = this;
         //开始战斗
-        StartTwoCampBattle(1, 2);
+        //StartTwoCampBattle(1, 2);
     }
 
     //获取阵营 0表示错误
@@ -52,6 +52,7 @@ public class Battle : MonoBehaviour
                     return false;
         }
         Debug.Log("阵营" + camp + "获胜");
+        PanelMgr.instance.OpenPanel<WinPanel>("", camp);
         return true;
     }
 
